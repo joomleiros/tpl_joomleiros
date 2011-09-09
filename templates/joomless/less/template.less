@@ -1,0 +1,40 @@
+
+@import url(variables.css);
+@import url(reset.css);
+@import url(960px.css);
+@import url(typography.css);
+@import url(layout.css);
+
+.clr {
+	height: 0!important;
+	visibility: hidden!important;
+	margin: 0!important; 
+	padding: 0!important;
+	line-height: 0!important;
+	clear:both!important;
+	border: 0 none!important;
+	content: ".";
+	display: block!important;
+	font-size: 0!important;
+}
+
+/* float clearing for IE6 */
+* html .clr{
+  height: 1%;
+  overflow: visible;
+}
+
+/* float clearing for IE7 */
+*+html .clr{
+  min-height: 1%;
+}
+
+/* float clearing for everyone else */
+.clr:after{
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  font-size: 0;
+}

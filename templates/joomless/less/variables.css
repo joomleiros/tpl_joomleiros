@@ -1,0 +1,260 @@
+@font-face{ 
+	font-family: 'Unseen';
+	src: url('../fonts/the_unseen-webfont.eot');
+	src: url('../fonts/the_unseen-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/the_unseen-webfont.woff') format('woff'),
+	     url('../fonts/the_unseen-webfont.ttf') format('truetype'),
+	     url('../fonts/the_unseen-webfont.svg#webfont') format('svg');
+}
+
+@font-face{ 
+	font-family: 'Lucida';
+	src: url('../fonts/lsans-webfont.eot');
+	src: url('../fonts/lsans-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/lsans-webfont.woff') format('woff'),
+	     url('../fonts/lsans-webfont.ttf') format('truetype'),
+	     url('../fonts/lsans-webfont.svg#webfont') format('svg');
+}
+
+@font-family-prymary: Tahoma,Geneva,sans-serif;
+@font-family-heading: Tahoma,Geneva,sans-serif;
+@font-family-fancy: "Lucida",Tahoma,Geneva,sans-serif;
+@font-family-fancy2: "kgfallforyou",Tahoma,Geneva,sans-serif;
+
+@color-primary: #4A4A4A;
+@color-secondary: #343434;
+@color-tertiary: #f0574C;
+
+
+@column: 30px;
+@gutter: 10px;
+@columns: @column + @gutter;
+
+@wrappfluid {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;	
+}
+
+@wrapp960 {
+	width: (@columns * 24) - (@gutter);
+	margin: 0 auto;
+	padding: 0 @gutter / 2;	
+}
+
+@wrapp768 {
+	width: (@columns * 19) - (@gutter);
+	margin: 0 auto;
+	padding: 0 4px;	
+}
+
+@wrapp480 {
+	width: (@columns * 12) - (@gutter);
+	margin: 0 auto;
+	padding: 0 5px;	
+}
+
+@wrapp320 {
+	width: (@columns * 8) - (@gutter);
+	margin: 0 auto;
+	padding: 0 5px;	
+}
+
+@sprite (@pos1; @pos2){ /* 0; 50% */
+	background: transparent url(../images/sprite.png) no-repeat scroll @pos1 @pos2;
+}
+
+@gradient (@color1; @color2) { /* #FF0000; #FFFFFF */
+	background-image: -moz-linear-gradient(top, @color1 0%, @color2 100%); /* FF3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@color1), color-stop(100%,@color2)); /* Chrome,Safari4+ */
+	background-image: -webkit-linear-gradient(top, @color1 0%,@color2 100%); /* Chrome10+,Safari5.1+ */
+	background-image: -o-linear-gradient(top, @color1 0%,@color2 100%); /* Opera11.10+ */
+	background-image: -ms-linear-gradient(top, @color1 0%,@color2 100%); /* IE10+ */
+	background-image: linear-gradient(top, @color1 0%,@color2 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=@color1, endColorstr=@color2); /* for IE */
+}
+
+@boder-radius (@radius) { /* 15px */
+	     -moz-border-radius: @radius; 
+	  -webkit-border-radius: @radius; 
+	          border-radius: @radius; 
+	   -moz-background-clip: padding; 
+	-webkit-background-clip: padding-box; 
+	        background-clip: padding-box; 
+}
+
+@transition (@trans) { /* 0.2s */
+	   -moz-transition: all @trans ease-out; /* FF4+ */
+	     -o-transition: all @trans ease-out; /* Opera 10.5+ */
+	-webkit-transition: all @trans ease-out; /* Saf3.2+, Chrome */
+	    -ms-transition: all @trans ease-out; /* IE10? */
+	        transition: all @trans ease-out;
+}
+
+@opacity (@opa1; @opa2) { /* 50; .50 */
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=@opa1)"; /* IE8 */
+          filter: progid:DXImageTransform.Microsoft.Alpha(opacity=@opa1); /* IE6 - IE7 */
+          filter: alpha(opacity=@opa1); /* IE7 - IE8 */
+    -moz-opacity: @opa2; /* FF3.5+ */
+  -khtml-opacity: @opa2;
+         opacity: @opa2;
+}
+
+@box_rotate (@degree) { /* 7.5deg */ 
+     -moz-transform: rotate(@degree);  /* FF3.5+ */
+       -o-transform: rotate(@degree);  /* Opera 10.5 */
+  -webkit-transform: rotate(@degree);  /* Saf3.1+, Chrome */
+      -ms-transform: rotate(@degree);  /* IE9 */
+          transform: rotate(@degree);  
+	 -sand-transform: rotate(@degree); /* IE6 - IE8 */
+               zoom: 1;
+}
+
+/* This Behavior does not work on IE by now. We will be adding IE support on netxt release */
+@boxshadow (@shadow1; @shadow2; @shadow3; @color) { /* 0px; 0px; 4px; #000000 */
+     -moz-box-shadow: @shadow1 @shadow2 @shadow3 @color; /* FF3.5 - 3.6 */
+  -webkit-box-shadow: @shadow1 @shadow2 @shadow3 @color; /* Saf3.0+, Chrome */
+          box-shadow: @shadow1 @shadow2 @shadow3 @color; /* Opera 10.5, IE9, FF4+, Chrome 10+ */
+}
+
+@box_rgba {
+  background-color: transparent;
+  background-color: rgba(180, 180, 144, 0.6);  /* FF3+, Saf3+, Opera 10.10+, Chrome, IE9 */
+              zoom: 1;
+}
+
+.grid_1 {
+	width: (@columns * 1) - @gutter;
+}
+
+.grid_2 {
+	width: (@columns * 2) - @gutter;
+}
+
+.grid_3 {
+	width: (@columns * 3) - @gutter;
+}
+
+.grid_4 {
+	width: (@columns * 4) - @gutter;
+}
+
+.grid_5 {
+	width: (@columns * 5) - @gutter;
+}
+
+.grid_6 {
+	width: (@columns * 6) - @gutter;
+}
+
+.grid_7 {
+	width: (@columns * 7) - @gutter;
+}
+
+.grid_8 {
+	width: (@columns * 8) - @gutter;
+}
+
+.grid_9 {
+	width: (@columns * 9) - @gutter;
+}
+
+.grid_10 {
+	width: (@columns * 10) - @gutter;
+}
+
+.grid_11 {
+	width: (@columns * 11) - @gutter;
+}
+
+.grid_12 {
+	width: (@columns * 12) - @gutter;
+}
+
+.grid_13 {
+	width: (@columns * 13) - @gutter;
+}
+
+.grid_14 {
+	width: (@columns * 14) - @gutter;
+}
+
+.grid_15 {
+	width: (@columns * 15) - @gutter;
+}
+
+.grid_16 {
+	width: (@columns * 16) - @gutter;
+}
+
+.grid_17 {
+	width: (@columns * 17) - @gutter;
+}
+
+.grid_18 {
+	width: (@columns * 18) - @gutter;
+}
+
+.grid_19 {
+	width: (@columns * 19) - @gutter;
+}
+
+.grid_20 {
+	width: (@columns * 20) - @gutter;
+}
+
+.grid_21 {
+	width: (@columns * 21) - @gutter;
+}
+
+.grid_22 {
+	width: (@columns * 22) - @gutter;
+}
+
+.grid_23 {
+	width: (@columns * 23) - @gutter;
+}
+
+.grid_24 {
+	width: (@columns * 24) - @gutter;
+}
+
+.grid_25 {
+	width: (@columns * 25) - @gutter;
+}
+
+.grid_26 {
+	width: (@columns * 26) - @gutter;
+}
+
+.grid_27 {
+	width: (@columns * 27) - @gutter;
+}
+
+.grid_28 {
+	width: (@columns * 28) - @gutter;
+}
+
+.grid_29 {
+	width: (@columns * 29) - @gutter;
+}
+
+.grid_30 {
+	width: (@columns * 30) - @gutter;
+}
+
+.marginleft {
+	margin-left: @gutter;
+}
+
+.marginright {
+	margin-right: @gutter;
+}
+
+.floatleft {
+	float: left;
+}
+
+.floatright {
+	float: right;
+}

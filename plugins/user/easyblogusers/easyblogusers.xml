@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="user" method="upgrade">
+	<name>User - EasyBlog Users</name>
+	<author>StackIdeas</author>
+	<creationDate>03 June 2010</creationDate>
+	<copyright>Copyright 2009 - 2010 StackIdeas. All rights reserved.</copyright>
+	<license>GPL License</license>
+	<authorEmail>support@stackideas.com</authorEmail>
+	<authorUrl>http://www.stackideas.com</authorUrl>
+	<version>2.0.0</version>
+	<description>EasyBlog user plugin. This plugin is responsible to delete user's related records such as blog post and etc.</description>
+	<files>
+		<filename plugin="easyblogusers">easyblogusers.php</filename>
+	</files>
+	<params/>
+</install>

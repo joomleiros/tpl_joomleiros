@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="1.6" type="template" client="site">
+  <name>joomless</name>
+  <creationDate>03/08/2011</creationDate>
+  <author>Paulo Griiettner</author>
+  <authorEmail>paulo@ideasnetstudio.com</authorEmail>
+  <authorUrl>http://www.ideasnetstudio.com</authorUrl>
+  <copyright>Copyright (C) 1998 - 2011 Ideas Net Studio</copyright>
+  <license>GNU</license>
+  <version>1.0.0</version>
+  <description>Template base para websites em HTML5</description>
+  
+  <files>
+    <filename>index.php</filename>
+    <filename>templateDetails.xml</filename>
+    <filename>params.ini</filename>
+  </files>
+  
+  <positions>
+    <position>mainmenu</position>
+    <position>search</position>
+    <position>right</position>
+    <position>banner-big</position>
+  </positions>
+  
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.tpl_joomless.ini</language>
+    <language tag="en-GB">en-GB/en-GB.tpl_joomless.sys.ini</language>
+  </languages>
+  
+  <config>
+    <fields name="params">
+	  <fieldset name="heading">
+		<field type="spacer" default="TEMPLATE_HEADING" />
+		<field name="mootools" type="radio" default="1" label="LOAD_MOOTOOLS" description="LOAD_MOOTOOLS_DESCRIPTION">
+		  <option value="0">NO</option>
+		  <option value="1">YES</option>
+		</field>
+		<field name="jquery" type="radio" default="0" label="LOAD_JQUERY" description="LOAD_JQUERY_DESCRIPTION">
+		  <option value="0">NO</option>
+		  <option value="1">YES</option>
+		</field>
+		<field name="noconflict" type="radio" default="0" label="LOAD_NO_CONFLICT" description="LOAD_NO_CONFLICT_DESCRIPTION">
+		  <option value="0">NO</option>
+		  <option value="1">YES</option>
+		</field>
+		<field name="modernizr" type="radio" default="1" label="LOAD_MODERNIZR" description="LOAD_MODERNIZR_DESCRIPTION">
+		  <option value="0">NO</option>
+		  <option value="1">YES</option>
+		</field>
+		<field name="lessphp" type="radio" default="1" label="LOAD_LESS_PHP" description="LOAD_LESS_PHP_DESCRIPTION">
+		  <option value="0">NO</option>
+		  <option value="1">YES</option>
+		</field>
+		<field name="mediaqueries" type="radio" default="1" label="LOAD_MEDIA_QUERIES" description="LOAD_MEDIA_QUERIES_DESCRIPTION">
+		  <option value="0">NO</option>
+		  <option value="1">YES</option>
+		</field>
+		<field name="iecss" type="radio" default="0" label="LOAD_IE_CSS" description="LOAD_IE_CSS_DESCRIPTION">
+		  <option value="0">NO</option>
+		  <option value="1">YES</option>
+		</field>
+		<field name="960" type="radio" default="0" label="LOAD_960" description="LOAD_960_DESCRIPTION">
+		  <option value="0">NO</option>
+		  <option value="1">YES</option>
+		</field>
+		<field name="generator" type="text" default="Joomless :: HTML5/CSS3 Enabled Joomla Template Framework" size="50" label="META_GENERATOR" description="META_GENERATOR_DESCRIPTION" />
+		<field name="csspie" type="textarea" default=".rounded, .gradient, .shadow" size="50" label="CSS_PIE" description="CSS_PIE_DESCRIPTION" />
+		<field name="sandpaper" type="radio" default="0" label="CSS_SAND_PAPER" description="CSS_SAND_PAPER_DESCRIPTION">
+		  <option value="0">NO</option>
+		  <option value="1">YES</option>
+		</field>
+	  </fieldset>
+	</fields>
+  </config>
+</extension>

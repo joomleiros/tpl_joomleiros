@@ -1,0 +1,15 @@
+@font-face {
+  font-family:'base';
+  src:url('../fonts/base.eot');
+  src:url('../fonts/base.eot?#iefix') format('embedded-opentype'), url('../fonts/base.woff') format('woff'), url('../fonts/base.ttf') format('truetype'), url('../fonts/base.svg#webfont') format('svg');
+}
+.wrapp960 {
+  width:950px;
+  margin:0 auto;
+  padding:0 5px;
+}
+.wrapp768 {
+  width:750px;
+  margin:0 auto;
+  padding:0 4px;
+}
